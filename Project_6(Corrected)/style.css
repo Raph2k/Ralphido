@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/mountains-1660789_1920.jpg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+}
+
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-card img:hover {
+    transform: scale(1.5);
+}
+
+.profile-card h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile-card p {
+    color: #555;
+    font-size: 16px;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.profile-card .social-icons {
+    margin-top: 15px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.profile-card .social-icons a {
+    margin: 0 10px;
+    color: #555;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.profile-card .social-icons a:hover {
+    color: #007bff;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card .button1:hover {
+    background-color: #007bff;
+}
+
+.profile-card .button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    padding: 10px 20px;
+    margin: 0.4rem;
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.4s;
+    font-size: 15px;
+}
+
+.profile-card .button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    padding: 10px 20px;
+    margin: 1rem;
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.4s;
+    font-size: 15px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Query for tablets */
+@media (min-width: 600px) {
+    .profile-card {
+        width: 400px;
+    }
+
+    .profile-card h2 {
+        font-size: 28px;
+    }
+
+    .profile-card p {
+        font-size: 18px;
+    }
+}
+
+/* Media Query for larger screens */
+@media (min-width: 1024px) {
+    .profile-card {
+        width: 450px;
+    }
+
+    .profile-card h2 {
+        font-size: 30px;
+    }
+
+    .profile-card p {
+        font-size: 20px;
+    }
+}
